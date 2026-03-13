@@ -8,5 +8,8 @@
   },
   "dependencies": {
     "discord.js-selfbot-v13": "latest"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
