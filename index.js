@@ -1,4 +1,21 @@
+// Node.js 18+ compatibility hack
+if (!globalThis.ReadableStream) {
+  const { ReadableStream } = require('stream/web');
+  globalThis.ReadableStream = ReadableStream;
+}
+if (!globalThis.File) {
+  globalThis.File = class File extends Blob {
+    constructor(bits, name, options = {}) {
+      super(bits, options);
+      this.name = name;
+      this.lastModified = options.lastModified || Date.now();
+    }
+  };
+}
+
 const { Client } = require('discord.js-selfbot-v13');
+const fs = require('fs');
+const path = require('path');
 const fs = require('fs');
 const path = require('path');
 
@@ -243,3 +260,4 @@ client.login(TOKEN).catch(error => {
     console.error('❌ Failed to login:', error.message);
     process.exit(1);
 });
+
