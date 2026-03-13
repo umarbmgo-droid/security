@@ -1,0 +1,12 @@
+{
+  "name": "professional-selfbot",
+  "version": "1.0.0",
+  "description": "Professional Discord Selfbot",
+  "main": "selfbot.js",
+  "scripts": {
+    "start": "node selfbot.js"
+  },
+  "dependencies": {
+    "discord.js": "^13.12.0"
+  }
+}
