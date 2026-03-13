@@ -1,1 +1,1 @@
-worker: node selfbot.js
+worker: node index.js
