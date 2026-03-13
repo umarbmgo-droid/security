@@ -1,13 +1,13 @@
 {
   "name": "railway-selfbot",
   "version": "1.0.0",
-  "description": "Discord Selfbot for Railway",
+  "description": "Discord Selfbot",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "discord.js-selfbot-v13": "latest"
+    "discord.js-selfbot-v13": "11.5.1"
   },
   "engines": {
     "node": "16.x"
